@@ -1,0 +1,56 @@
+---
+title: "Problems Met in Building the Book"
+author: "Sen Yang"
+date: "9/10/2018"
+output:
+ pdf_document:
+  number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Information About the Current R Session
+
+```{r session, echo=FALSE}
+sessionInfo()
+```
+
+# Installation and Building Process
+
+- Clone the source of Hadley Wickham's **Advanced R Programming** from his GitHub repository to a local space on my computer
+- Follow the instruction at <https://bookdown.org/yihui/bookdown/get-started.html> 
+
+However, in the process of building the book, several probelms are met and solved as followings.
+
+# Problems Met in Building the Book
+
+## Problem 1
+
+Installed all packages needed.
+
+After I clicked `Build All` button on `Build` tab, Error messages would be shown in the `Build` window. Just follow the error messages to install all missing packages and rebuild the book.
+If any package is not included on CRAN, install it directly from *github* by `devtools`, like `'devtool::install_github()'`.
+
+## Problem 2
+
+Installed the latest version of [XQuartz](https://www.xquartz.org/) and [Pandoc](https://pandoc.org/installing.html).
+
+## Problem 3
+
+When installing package `TinyTex`, I got a error as
+
+```
+destination /usr/local/bin not writable, no links from /Users/hagen/Library/TinyTeX/bin/x86_64-darwin. add of symlinks had 1 error(s), see messages above. add of symlinks had 1 error(s), see messages above. tlmgr: An error has occurred. See above messages. Exiting.
+
+```
+
+Solved it by following the instruction at <https://github.com/yihui/tinytex/issues/24>.
+
+## Problem 4
+
+The font "Inconsolata" cannot be found. 
+Just Google it and then install on my computer. Rebuild the book.
+
+
